@@ -1,0 +1,20 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.ura-tools/memorybank",
+  "version": "1.0.0",
+  "description": "Persistent cross-session memory for AI agents",
+  "publisher": {
+    "name": "ura",
+    "url": "https://nonwall.dev"
+  },
+  "sourceUrl": "https://github.com/ura-tools/memorybank",
+  "license": "MIT",
+  "runtime": "node",
+  "packages": {
+    "npm": {
+      "name": "@ura-dev/memorybank",
+      "version": "1.0.0",
+      "packageArguments": ["memorybank-mcp"]
+    }
+  }
+}

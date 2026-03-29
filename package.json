@@ -1,0 +1,37 @@
+{
+  "name": "@ura-dev/memorybank",
+  "version": "1.0.0",
+  "description": "Persistent cross-session memory for AI agents — MCP server + CLI",
+  "main": "lib/index.js",
+  "bin": {
+    "memorybank": "bin/cli.js",
+    "memorybank-mcp": "bin/mcp-server.js"
+  },
+  "scripts": {
+    "test": "node test.js"
+  },
+  "keywords": [
+    "memory",
+    "persistent",
+    "agent",
+    "mcp",
+    "mcp-server",
+    "ai-agent",
+    "context",
+    "cross-session",
+    "knowledge-base",
+    "claude",
+    "cursor",
+    "windsurf"
+  ],
+  "author": "ura",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "mcpName": "io.github.ura-tools/memorybank",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ura-tools/memorybank"
+  }
+}

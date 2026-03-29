@@ -1,0 +1,7 @@
+node_modules/
+.test-memories/
+.memorybank/
+*.tgz
+.npmrc
+.github-auth.json
+.devto-auth.json

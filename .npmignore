@@ -1,0 +1,13 @@
+.test-memories/
+.memorybank/
+.git/
+.gitignore
+.github-auth.json
+.npmrc
+scripts/
+test.js
+docs/
+site/
+*.tgz
+.mcpregistry_*
+.devto-auth.json
