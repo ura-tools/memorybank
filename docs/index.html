@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>memorybank — Persistent Memory for AI Agents</title>
+<meta name="description" content="Your AI agent forgets everything between sessions. memorybank fixes that. MCP server + CLI, zero dependencies.">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:system-ui,-apple-system,sans-serif;background:#0a0a0a;color:#e0e0e0;line-height:1.6}
+.hero{text-align:center;padding:80px 20px 60px;max-width:800px;margin:0 auto}
+h1{font-size:3rem;font-weight:800;background:linear-gradient(135deg,#60a5fa,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:16px}
+.tagline{font-size:1.3rem;color:#9ca3af;margin-bottom:40px}
+.install{background:#1a1a2e;border:1px solid #333;border-radius:12px;padding:24px;font-family:'Courier New',monospace;font-size:1.1rem;color:#60a5fa;margin:30px auto;max-width:500px;text-align:left}
+.install span{color:#9ca3af}
+.cta{display:inline-block;padding:14px 36px;background:linear-gradient(135deg,#3b82f6,#8b5cf6);color:#fff;text-decoration:none;border-radius:8px;font-weight:600;font-size:1.1rem;margin:10px}
+.cta:hover{opacity:0.9}
+.cta.secondary{background:transparent;border:2px solid #3b82f6}
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px;max-width:900px;margin:60px auto;padding:0 20px}
+.feature{background:#111;border:1px solid #222;border-radius:12px;padding:24px}
+.feature h3{color:#60a5fa;margin-bottom:8px;font-size:1.1rem}
+.feature p{color:#9ca3af;font-size:0.95rem}
+.tools{max-width:700px;margin:60px auto;padding:0 20px}
+.tools h2{text-align:center;margin-bottom:30px;font-size:1.8rem}
+.tool{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid #1a1a1a}
+.tool code{color:#a78bfa;white-space:nowrap;font-size:0.9rem;min-width:140px}
+.tool span{color:#9ca3af;font-size:0.9rem}
+.setup{max-width:600px;margin:60px auto;padding:0 20px}
+.setup h2{text-align:center;margin-bottom:24px;font-size:1.8rem}
+.code{background:#1a1a2e;border:1px solid #333;border-radius:8px;padding:16px;font-family:'Courier New',monospace;font-size:0.85rem;color:#e0e0e0;overflow-x:auto;margin:16px 0}
+.footer{text-align:center;padding:40px;color:#555;font-size:0.85rem}
+.footer a{color:#60a5fa;text-decoration:none}
+.badge{display:inline-block;margin:4px;padding:4px 12px;background:#1a1a2e;border-radius:20px;font-size:0.8rem;color:#9ca3af}
+</style>
+</head>
+<body>
+<div class="hero">
+  <h1>memorybank</h1>
+  <p class="tagline">Your AI agent forgets everything between sessions.<br>memorybank fixes that.</p>
+  <div class="install">
+    <span>$</span> npx @ura-dev/memorybank --help
+  </div>
+  <a class="cta" href="https://www.npmjs.com/package/@ura-dev/memorybank">Install from npm</a>
+  <a class="cta secondary" href="https://github.com/ura-tools/memorybank">View Source</a>
+  <div style="margin-top:20px">
+    <span class="badge">MCP Server</span>
+    <span class="badge">Zero Dependencies</span>
+    <span class="badge">Claude Code</span>
+    <span class="badge">Cursor</span>
+    <span class="badge">Windsurf</span>
+  </div>
+</div>
+
+<div class="features">
+  <div class="feature">
+    <h3>Persistent Memory</h3>
+    <p>Memories survive across sessions. Your agent remembers who you are, what you're working on, and what you prefer.</p>
+  </div>
+  <div class="feature">
+    <h3>Structured Types</h3>
+    <p>Five memory types: user, project, feedback, reference, custom. Organized knowledge, not a dump.</p>
+  </div>
+  <div class="feature">
+    <h3>Smart Recall</h3>
+    <p>Full-text search with relevance scoring. The agent retrieves what matters, not everything.</p>
+  </div>
+  <div class="feature">
+    <h3>Project Namespaces</h3>
+    <p>Separate memory banks per project. Context stays isolated where it belongs.</p>
+  </div>
+  <div class="feature">
+    <h3>Zero Config</h3>
+    <p>npx and go. No database, no cloud, no API keys. Pure local file storage.</p>
+  </div>
+  <div class="feature">
+    <h3>Works Everywhere</h3>
+    <p>MCP server compatible with Claude Code, Cursor, Windsurf, and any MCP-enabled agent.</p>
+  </div>
+</div>
+
+<div class="tools">
+  <h2>8 MCP Tools</h2>
+  <div class="tool"><code>memory_store</code> <span>Save a memory with type, tags, and content</span></div>
+  <div class="tool"><code>memory_recall</code> <span>Retrieve the most relevant memories for a query</span></div>
+  <div class="tool"><code>memory_list</code> <span>List memories, filter by type or tag</span></div>
+  <div class="tool"><code>memory_get</code> <span>Get a specific memory by ID</span></div>
+  <div class="tool"><code>memory_update</code> <span>Update an existing memory</span></div>
+  <div class="tool"><code>memory_delete</code> <span>Delete a memory</span></div>
+  <div class="tool"><code>memory_search</code> <span>Full-text search across all memories</span></div>
+  <div class="tool"><code>memory_stats</code> <span>Statistics: counts, types, storage size</span></div>
+</div>
+
+<div class="setup">
+  <h2>Quick Setup</h2>
+  <p style="color:#9ca3af;text-align:center;margin-bottom:16px">Add to your Claude Code or Cursor config:</p>
+  <div class="code"><pre>{
+  "mcpServers": {
+    "memorybank": {
+      "command": "npx",
+      "args": ["-y", "@ura-dev/memorybank", "memorybank-mcp"]
+    }
+  }
+}</pre></div>
+  <p style="color:#9ca3af;text-align:center;margin-top:16px">That's it. Your agent now has persistent memory.</p>
+</div>
+
+<div class="footer">
+  <p>Built by <a href="https://github.com/ura-tools">ura</a> · <a href="https://nonwall.dev">nonwall.dev</a></p>
+  <p style="margin-top:8px">Also check out <a href="https://ura-tools.github.io/agentrace/">agentrace</a> — observability for AI agents</p>
+</div>
+</body>
+</html>
