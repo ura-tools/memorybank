@@ -1,0 +1,37 @@
+# memorybank
+
+Persistent cross-session memory for AI agents.
+
+## What it does
+memorybank is an MCP server and CLI tool that gives AI coding agents persistent memory across sessions. When a session ends, memories are saved as local markdown files. When a new session starts, the agent can recall relevant context.
+
+## Install
+npx @ura-dev/memorybank --help
+
+## MCP Setup
+Add to MCP config:
+{"mcpServers":{"memorybank":{"command":"npx","args":["-y","@ura-dev/memorybank","memorybank-mcp"]}}}
+
+## Tools
+- memory_store: Save a new memory with type (user/project/feedback/reference/custom), name, content, optional tags
+- memory_recall: Retrieve most relevant memories for a query, returns full content
+- memory_list: List all memories, filter by type or tag
+- memory_get: Get a specific memory by its 12-char hex ID
+- memory_update: Update an existing memory (partial update)
+- memory_delete: Delete a memory by ID
+- memory_search: Full-text search across all memories with relevance scoring
+- memory_stats: Get counts by type, total storage size
+
+## Storage
+File-based: ~/.memorybank/<namespace>/memories/<id>.md
+Each memory is a markdown file with YAML frontmatter (id, name, type, description, created, updated, tags).
+Index maintained at ~/.memorybank/<namespace>/index.json.
+Namespaces isolate memories per project.
+
+## Requirements
+Node.js >= 18. Zero dependencies.
+
+## Links
+npm: https://www.npmjs.com/package/@ura-dev/memorybank
+GitHub: https://github.com/ura-tools/memorybank
+License: MIT
